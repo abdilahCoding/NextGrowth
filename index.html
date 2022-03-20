@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <div id="table_container">
+      <table id="customers">
+        <tr>
+          <th>ID</th>
+          <th>Date de création</th>
+          <th>Etat</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Nom d'utilisateur</th>
+          <th>Matricule</th>
+          <th>Action</th>
+        </tr>
+
+        <tbody id="myTable"></tbody>
+      </table>
+    </div>
+    <div  class="add"><button id="myBtn" class="btn_add">Ajouter utilisateur</button></div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Ajouter D'utulisateur</h2>
+          <div style="text-align: center;" id="errorMessage"></div>
+        </div>
+        <div class="modal-body">
+          <div class="secOne">
+            <div>
+              <label >Nom</label>
+              <input type="text" id="firstName" />
+            </div>
+         <div>
+          <label >Prenom</label>
+          <input type="text"  id="lastName" />
+         </div>
+          <div>
+            <label >Etat</label>
+            <select id="status">
+              <option value="Validé">Validé</option>
+              <option value="En validation">En validation</option>
+              <option value="Rejeté">Rejeté</option>
+            </select>
+            
+          </div>
+          
+        </div>
+        <div class="secTwo">
+            <div>
+              <label >Nom d'utilisateur</label>
+              <input type="text"  id="userName" />
+            </div>
+         <div class='devSecTwo'>
+          <label >date de céeation</label>
+          <input type="date"  id="date" />
+         </div>
+        </div>
+        <div class="secThree">
+        <label >Matricule</label>
+          <input type="text"  id="registrationNumber" />
+        </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button class="btn_add" onClick="add()">Enregister</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
